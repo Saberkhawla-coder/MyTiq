@@ -1,8 +1,108 @@
 @import "tailwindcss";
-:root {
-  
-  background-color: #001233;
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Great+Vibes&family=Cormorant:wght@300;400&display=swap');
 
+:root {
+  background-color: #001233;
+}
+
+/* Wrapper général */
+.mytiq-ticket-banner {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cormorant", serif;
+}
+
+/* Section logo / ticket */
+.ticket-section {
+  padding: 20px;
+}
+
+/* Texte MYTIQ EVENT */
+.logo-title {
+  font-family: "Poiret One", sans-serif;
+  font-size: 3em;
+  font-weight: 900;
+  line-height: 0.9;
+  margin: 0;
+  color: white;
+  text-transform: uppercase;
+}
+
+.logo-subtitle {
+  font-family: "Poiret One", sans-serif;
+  font-size: 2.2em;
+  font-weight: 100;
+  margin: 0;
+  color: white;
+  line-height: 1;
+}
+
+.content-section {
+  background-color: #A40000;
+  width: 40%;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative; 
+  text-align: center;
+  color: #C9BCBC;
+  border-right: 2px dashed #001233;
+}
+
+/* Style du cercle */
+.Cercle {
+  height: 20px;
+  width: 20px;
+  background-color: #001233;
+  border-radius: 50%;
+  position: absolute;     
+}
+
+.Cercle.cercle1 { top: -10px;right: -10px; }
+.Cercle.cercle2 { top: -8px; left: -2px; }
+.Cercle.cercle3 { bottom: -10px; right: -10px; }
+.Cercle.cercle4 { top: -8px;right: -120px;  }
+.Cercle.cercle5 { bottom: -8px; right: -120px; }
+.Cercle.cercle6 { bottom: -10px;left: -2px;  }
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: var(--dot-color, #001233);
+}
+.logoBg{
+    background-color: var(--bg-color, #A40000);
+}
+.content-title {
+  color: white;
+  font-style: "Poiret One", sans-serif;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.content-quote {
+  font-style: italic;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+
+.stars-section {
+  background-color: #A40000;
+  width: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   
+}
+.star{
+    font-size: 19px;
 }
 
