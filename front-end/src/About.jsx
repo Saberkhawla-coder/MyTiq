@@ -4,77 +4,86 @@ import Footer from "./components/Footer";
 export default function About() {
   return (
     <>
-    <main className="min-h-screen bg-[#001233;] text-white flex items-center justify-center p-8">
-      <section className="bg-[#001233] max-w-4xl w-full rounded-xl p-8 shadow-lg">
-        {/* Header */}
-        <div className="flex items-center gap-6 mb-6">
-          <div className="w-16 h-16 rounded-lg bg-[#A40000] flex items-center justify-center font-bold text-lg">
-            MT
-          </div>
-          <div>
-            <h1 className="text-3xl font-semibold">MyTiq — À propos</h1>
-            <p className="text-sm opacity-90">
-              Plateforme simple pour gérer événements, tickets et participants.
-            </p>
-          </div>
-        </div>
+      <main className="min-h-screen bg-[#001233] text-white flex items-center justify-center p-6">
+        
+        <section className="bg-[#001233] max-w-4xl w-full rounded-2xl p-10 border border-white/10 shadow-xl">
 
-        {/* Description */}
-        <p className="mb-4 text-base leading-relaxed">
-          <strong>MyTiq</strong> est une plateforme moderne permettant de créer
-          des événements, gérer les participants et vendre des billets facilement.
-        </p>
+          {/* HEADER */}
+          <div className="flex items-center gap-5 mb-8">
+            <div className="w-16 h-16 rounded-xl bg-[#A40000] flex items-center justify-center font-bold text-xl shadow-lg">
+              MT
+            </div>
 
-        <p className="mb-6 text-base leading-relaxed">
-          L'interface utilise une charte visuelle basée sur{" "}
-          <code>#A40000</code> et <code>#001233</code>.
-        </p>
-
-        {/* Features grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-          <div className="p-4 rounded-lg bg-white/5 border border-white/10">
-            <strong>Création d'événements</strong>
-            <p className="text-sm mt-1">Ajout du lieu, date, prix et billets.</p>
+            <div>
+              <h1 className="text-4xl font-bold tracking-wide">À propos — MyTiq</h1>
+              <p className="text-sm opacity-80">Gestion simple d’événements, tickets & participants.</p>
+            </div>
           </div>
 
-          <div className="p-4 rounded-lg bg-white/5 border border-white/10">
-            <strong>Participants</strong>
-            <p className="text-sm mt-1">Liste, filtres et export CSV.</p>
+          {/* DESCRIPTION */}
+          <p className="mb-4 leading-relaxed text-[15px]">
+            <strong>MyTiq</strong> est une plateforme moderne conçue pour créer,
+            gérer et organiser facilement des événements. Elle permet également de
+            suivre les participants et de vendre des billets en toute simplicité.
+          </p>
+
+          <p className="mb-8 leading-relaxed text-[15px] opacity-90">
+            L’interface applique une identité visuelle basée sur les couleurs{" "}
+            <code className="text-[#A40000] font-semibold">#A40000</code> et{" "}
+            <code className="text-blue-300 font-semibold">#001233</code>, offrant
+            une expérience claire, moderne et professionnelle.
+          </p>
+
+          {/* FEATURE GRID */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10">
+            {[
+              {
+                title: "Création d'événements",
+                text: "Ajout du lieu, description, date, prix et billets.",
+              },
+              {
+                title: "Participants",
+                text: "Liste détaillée, filtrage, export CSV.",
+              },
+              {
+                title: "Billetterie",
+                text: "Génération QR Code, validation & paiements.",
+              },
+              {
+                title: "Statistiques",
+                text: "Suivi des ventes en temps réel.",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="p-5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition shadow-md"
+              >
+                <strong className="text-lg">{item.title}</strong>
+                <p className="text-sm opacity-90 mt-1">{item.text}</p>
+              </div>
+            ))}
           </div>
 
-          <div className="p-4 rounded-lg bg-white/5 border border-white/10">
-            <strong>Billetterie</strong>
-            <p className="text-sm mt-1">QR code, validation et paiement.</p>
+          {/* ACTION BUTTONS */}
+          <div className="flex flex-wrap gap-4">
+            <button
+              className="bg-[#A40000] px-5 py-2.5 rounded-lg font-semibold hover:bg-red-700 transition shadow-lg"
+              onClick={() => (window.location.href = "/create-event")}
+            >
+              Créer un événement
+            </button>
+
+            <button
+              className="border border-white/25 px-5 py-2.5 rounded-lg font-semibold hover:bg-white/10 transition shadow-lg"
+              onClick={() => (window.location.href = "/events")}
+            >
+              Voir les événements
+            </button>
           </div>
+        </section>
+      </main>
 
-          <div className="p-4 rounded-lg bg-white/5 border border-white/10">
-            <strong>Statistiques</strong>
-            <p className="text-sm mt-1">Ventes en temps réel.</p>
-          </div>
-        </div>
-
-     
-        <div className="flex flex-wrap gap-4">
-          <button
-            className="bg-[#A40000] px-4 py-2 rounded-lg font-semibold hover:bg-red-700 transition"
-            onClick={() => (window.location.href = "/create-event")}
-          >
-            Créer un événement
-          </button>
-          <button
-            className="border border-white/25 px-4 py-2 rounded-lg font-semibold hover:bg-white/10 transition"
-            onClick={() => (window.location.href = "/events")}
-          >
-            Voir les événements
-          </button>
-        </div>
-
-       
-      </section> 
-      
-    </main>
-    <Footer/>
+      <Footer />
     </>
-    
   );
 }
