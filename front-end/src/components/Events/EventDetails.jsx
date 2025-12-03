@@ -3,24 +3,25 @@ import img6 from '../../assets/images/img6.jpg'
 import Footer from '../Footer'
 import { Link } from 'react-router-dom'
 import { TbTicket } from "react-icons/tb";
+import { GrLinkPrevious } from "react-icons/gr";
 
 function EventDetails() {
   return (
     <>
       <div className="min-h-screen bg-[#001233] text-white px-6 py-10">
 
-        {/* BACK BUTTON */}
-        <Link
-          to="/event"
+    
+       
+
+        <div className="flex justify-center items-start flex-col md:flex-row gap-10 md:h-[380px]">
+           <Link
+          to="/events"
           className="inline-block border border-white/60 px-4 py-2 rounded-lg mb-8 
                      transition hover:bg-white/20 hover:border-white"
         >
-          Back
+          <GrLinkPrevious />
         </Link>
-
-        <div className="flex justify-center items-start flex-col md:flex-row gap-10 md:h-[380px]">
-
-  {/* IMAGE */}
+ 
   <div className="w-full md:w-[380px] h-full">
     <img
       src={img6}
@@ -30,7 +31,7 @@ function EventDetails() {
     />
   </div>
 
-  {/* EVENT INFO */}
+
   <div className="max-w-lg h-full flex flex-col justify-between space-y-4">
     <h1 className="text-4xl font-extrabold tracking-wide">
       The Serenity Soirée

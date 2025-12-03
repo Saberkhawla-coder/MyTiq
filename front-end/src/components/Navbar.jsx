@@ -38,7 +38,7 @@ function Navbar() {
             HOME
           </Link>
           <Link
-            to="/event"
+            to="/events"
             style={{
               color: "#A40000",
               textDecoration: "none",
